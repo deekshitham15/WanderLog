@@ -52,7 +52,8 @@ country_name VARCHAR(100)
 
 2. visited_countries (User’s visited countries):
 
-id	SERIAL PRIMARY KEY Unique identifier
-country_code	CHAR(2)	References countries.country_code
-
+CREATE TABLE visited_countries(
+id	SERIAL PRIMARY KEY,
+country_code	CHAR(2)	REFERENCES countries(country_code)
+);
 ```
