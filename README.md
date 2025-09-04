@@ -31,7 +31,7 @@ Other: Body-parser, pg (node-postgres)
 📂 Project Structure
 
 📦 WanderLog
- ┣ 📂 public          # Static assets (CSS, images, etc.)
+ ┣ 📂 public          # Static assets (CSS, images, etc.)\n
  ┣ 📂 views           # EJS templates (index.ejs)
  ┣ 📜 index.js        # Main server file
  ┣ 📜 package.json    # Dependencies and scripts
@@ -42,14 +42,16 @@ Other: Body-parser, pg (node-postgres)
 
 Two tables are used:
 
-1. countries (Master list of countries)
+1. countries (Master list of countries):
+
 CREATE TABLE countries(
 id SERIAL PRIMARY KEY,
 country_code CHAR(2),
 country_name VARCHAR(100)
 );
 
-2. visited_countries (User’s visited countries)
+3. visited_countries (User’s visited countries):
+
 id	SERIAL PRIMARY KEY Unique identifier
 country_code	CHAR(2)	References countries.country_code
 
